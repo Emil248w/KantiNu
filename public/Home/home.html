@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hjem - Kantine App</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="top">
+    <div class="header">
+      <div class="valgt-kantine" id="valgtKantine">
+      </div>
+      <div class="kantine-dropdown" id="kantineDropdown">
+        <div class="dropdown-option">Niels Brock DIG</div>
+        <div class="dropdown-option">Niels Brock JTP</div>
+        <div class="dropdown-option">Niels Brock INNO</div>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Søg">
+      </div>
+      <div class="profil-container">
+        <div class="profil-billede" id="profilbillede">G</div>
+        <div class="profil-dropdown" id="profilDropdown">
+          <div class="dropdown-option" id="logudOption">Log ud</div>
+        </div>
+      </div>
+    </div>
+    <h1 class="welcome-text" id="welcomeText">God aften gæst</h1>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <ul>
+            <li id="nav-bestil">
+                <a href="../Bestil/bestil.html"><i class="fas fa-utensils"></i> Bestil</a>
+            </li>
+            <li id="nav-kviteringer">
+                <a href="kvitering.html"><i class="fas fa-receipt"></i> Kviteringer</a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+  </div>
+  <div class="tilbud-container">
+    <div class="tilbud-banner" id="tilbud1">
+      <p class="tilbud-titel">Cookie</p>
+      <p class="tilbud-tekst">Kun 10 kr.</p>
+    </div>
+    <div class="tilbud-banner" id="tilbud2">
+      <p class="tilbud-titel">Cookie</p>
+      <p class="tilbud-tekst">Kun 10 kr.</p>
+    </div>
+  </div>
+  <div class="widgets">
+     <div class="rektangel-widget" id="genbestilWidget">
+      <p class="widget-titel">Genbestil</p>
+      <p class="widget-tekst">Skal du ikke have endnu en lækker Sandwich?</p>
+    </div>
+    <div class="kvadrat-widget" id="åbningstiderWidget">
+      <p class="widget-titel">Åbningstider</p>
+      <p class="widget-tekst">Åbent alle dage fra</p>
+      <p class="widget-tekst">07:50 til 14:00</p>
+    </div>
+    <div class="kvadrat-widget" id="dagensretWidget">
+      <p class="widget-titel">Dagens Ret</p>
+      <p class="widget-tekst">Spagetthi Bolognese</p>
+    </div>
+     <div class="rektangel-widget" id="dagenDeal">
+      <p class="widget-titel">Dagen Deal</p>
+      <p class="widget-tekst">Spar 30% på Haribo slikposer kun i dag!</p>
+    </div>
+    <div class="rektangel-widget" id="stempelkortDagensret">
+      <p class="widget-titel">Stempelkort - Dagens ret</p>
+      <p class="widget-tekst">Køb 6 dagens ret og få en gratis!</p>
+    </div>
+    <div class="rektangel-widget" id="stempelkortSanswich">
+      <p class="widget-titel">Stempelkort - Sanswich</p>
+      <p class="widget-tekst">Køb 6 sandwiches og få en gratis!</p>
+    </div>
+    <div class="kvadrat-widget" id="ugenTilbud">
+      <p class="widget-titel">Ugen tilbud</p>
+      <p class="widget-tekst">To for en sandwich!</p>
+    </div>
+
+  </div>
+
+  <script src="home.js"></script>
+</body>
+
+</html>

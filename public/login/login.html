@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kantine App</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div id="form-toggle">
+            <button id="vis-login" class="toggle-btn">Log ind</button>
+            <button id="vis-signup" class="toggle-btn">Opret bruger</button>
+        </div>
+        <form id="login-formular" class="form">
+            <div class="form-gruppe">
+                <input type="email" id="login-email" class="input" required placeholder="E-mail">
+            </div>
+            <div class="form-gruppe">
+                <input type="password" id="login-adgangskode" class="input" required placeholder="Adgangskode">
+            </div>
+            <button type="submit" class="submit-btn">Log ind</button>
+        </form>
+    
+        <form id="opretelses-formular" class="skujlt">
+            <div class="form-gruppe">
+                <input type="text" id="opret-navn" class="input" required placeholder="Fulde navn">
+            </div>
+            <div class="form-gruppe">
+                <input type="email" id="opret-email" class="input" required placeholder="E-mail">
+            </div>
+            <div class="form-gruppe">
+                <input type="password" id="opret-adgangskode" class="input" required placeholder="Adgangskode">
+            </div>
+            <div class="form-gruppe">
+                <input type="password" id="opret-bekræft-adgangskode" class="input" required placeholder="Bekræft adgangskode">
+            </div>
+            <button type="submit" class="submit-btn">Opret bruger</button>
+        </form>
+    </div>
+    <script type="module" src="../firebase/firebase.js"></script>
+    <script type="module" src="login.js"></script>
+</body>
+</html>

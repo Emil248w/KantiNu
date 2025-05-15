@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gennemfør Køb - Kantine App</title>
+    <link rel="stylesheet" href="køb.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <button id="tilbagePil" class="tilbage-pil"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1 class="header" id="Header">Gennemfør Køb</h1>
+    <div class="kurv-container">
+        <div id="produkter-container"></div>
+        <div class="samlet-pris">
+            <h2>Samlet beløb: <span id="samletPrisVisning">0</span> kr.</h2>
+        </div>
+        <div class="betalingsmetode-container">
+            <label for="betalingsmetode">Vælg betalingsmetode:</label>
+            <select name="betalingsmetode" id="betalingsmetode">
+                <option value="applepay">Apple Pay</option>
+                <option value="mobilepay">MobilePay</option>
+                <option value="betalingskort">Betalingskort</option>
+                <option value="kontanter">Kontanter</option>
+            </select>
+        </div>
+        <button id="gennemfør-bestilling-knap" class="gennemfør-bestilling-knap">Gennemfør Bestilling</button>
+    </div>
+    <script type="module" src="køb.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "kantine-app",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "testwrite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node testwrite.js",
+    "dev": "live-server --port=5500 --no-browser"
+  },
+  "dependencies": {
+    "@firebase/auth": "^1.10.2",
+    "@firebase/firestore": "^4.7.12",
+    "firebase": "^11.7.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Kantine App",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

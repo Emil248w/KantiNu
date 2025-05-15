@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.kurv-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.produkt-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.produkt-billede {
+    width: 80px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.produkt-indhold {
+    flex: 1;
+}
+
+.produkt-titel {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.produkt-pris {
+    font-weight: bold;
+    color: #1c5491;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.produkt-total {
+    font-weight: bold;
+    color: #1c5491;
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.samlet-pris {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.samlet-pris h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.knapper-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.bestil-knap {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.bestil-knap:hover {
+    background-color: #45a049;
+}
+
+.bestil-knap:active {
+    transform: scale(0.98);
+}
+
+.tilbage-pil {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background: #1c5491;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.tilbage-pil:hover {
+    /* transform: scale(1.1); */
+    background: #164580;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.kvantitet-knapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.kvantitet-knap-minus,
+.kvantitet-knap-plus {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.kvantitet-knap-minus:hover,
+.kvantitet-knap-plus:hover {
+    background: #e0e0e0;
+}
+
+.kvantitet-vis {
+    min-width: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .produkt-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .produkt-billede {
+        width: 100%;
+        max-height: 200px;
+        margin-right: 0;
+    }
+    
+    .knapper-container {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+        margin-left: 0;
+    }
+    
+    .bestil-knap {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .tilbage-pil {
+        left: 10px;
+        top: 10px;
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .kvantitet-knapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.ryd-kurv-knap {
+    background-color: #f4f4f4; 
+    color: #333; 
+    border: 1px solid #ccc; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; 
+    transition-duration: 0.4s; 
+}
+
+.ryd-kurv-knap:hover {
+    background-color: #e0e0e0; 
+    border-color: #bbb;
+}
+
+.header {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}

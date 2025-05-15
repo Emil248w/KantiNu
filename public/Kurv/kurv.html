@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurv - Kantine App</title>
+    <link rel="stylesheet" href="kurv.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <button class="tilbage-pil" id="tilbagePil"><i class="fa-solid fa-arrow-left"></i></button>
+    <h1 class="header" id="Header">Din Kurv</h1>
+    <div class="kurv-container">
+        <div id="produkter-container"></div>
+        <div class="samlet-pris">
+            <h2>Samlet beløb: <span id="samletPrisVisning">0</span> kr.</h2>
+        </div>
+        <div class="knapper-container">
+            <button id="tidspunktKnap" class="bestil-knap">Vælg tidspunkt</button>
+            <button id="rydKurvKnap" class="ryd-kurv-knap">Ryd kurv</button>
+        </div>
+    </div>
+    <script src="kurv.js"></script>
+</body>
+</html>
