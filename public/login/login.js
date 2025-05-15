@@ -42,7 +42,7 @@ loginFormular.addEventListener('submit', async (e) => {
         
         loginFormular.reset();
     } catch (error) {
-        alert('Forkert email eller adgangskode');
+        alert('De intastede oplysninger er ikke korrekte');
     }
 });
 

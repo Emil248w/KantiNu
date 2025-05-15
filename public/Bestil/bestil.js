@@ -3,7 +3,6 @@ import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.8.0/f
 
 /* Hent alle dokumenter fra "mad" i databasen */
 async function hentMadCollection() {
-    try {
         const madCollection = collection(db, 'mad');
         const madSnapshot = await getDocs(madCollection); /* Henter  alle dokumenter fra "mad"*/
         const madList = madSnapshot.docs.map(doc => ({      /*Konvereterer dokumenterne til et array af objekter*/
@@ -12,12 +11,6 @@ async function hentMadCollection() {
         }));
         
         visKategorier(madList);
-        
-        return madList;
-        
-    } catch (error) {
-        throw error;
-    }
 }
 
 /*Vis kategorierne fra "mad"*/
@@ -41,7 +34,6 @@ function visKategorier(Kategorier) {
         container.appendChild(kategoriDiv);
 
         kategoriDiv.addEventListener('click', async () => {         /* Når der klikkes på en kategori, hentes retter fra den kategori */
-            try {
                 /* Henter retter under collectionen */
                 const retterCollection = collection(db, 'mad', kategori.id, 'retter');
                 const retterSnapshot = await getDocs(retterCollection); /* Henter  alle dokumenter fra "mad"*/
@@ -57,9 +49,6 @@ function visKategorier(Kategorier) {
                 }));
 
                 window.location.href = '../Bestil - Valgt Kategori/valgt.html';
-            } catch (error) {
-                throw error;
-            }
         });
     });
 }
